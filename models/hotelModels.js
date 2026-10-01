@@ -21,10 +21,6 @@ Hotel.init({
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  city:{
-    type: DataTypes.STRING(100),
-    allowNull: false
-  },
   image: {
     type: DataTypes.STRING(200),
     allowNull: false

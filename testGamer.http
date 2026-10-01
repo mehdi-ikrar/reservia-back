@@ -1,0 +1,2 @@
+### Récupérer tous les Gamers
+GET http://localhost:3000/hotels
