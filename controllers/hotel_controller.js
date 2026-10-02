@@ -39,4 +39,32 @@ export const hotelController = {
       });
     }
   },
+  async getOneHotel(req, res){
+        const { id } = req.params;
+        try {
+            const hotel = await Hotel.findByPk(id, {
+                attributes: { exclude: ['cityId'] },
+                include: [
+                    {
+                        model: Theme,
+                        as: 'themes',
+                        through: { attributes: [] }
+                    },
+                    {
+                        model: City,
+                        attributes: ['id', 'name']
+                    }
+                ]
+            });
+            if(!hotel) {
+                return res.status(404).json({ message : 'Hôtel non trouvé.' })
+            }
+            res.status(200).json(hotel);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Erreur lors de la récupération de l\'hôtel.' });
+        }
+    }
 };
+
+

@@ -11,7 +11,7 @@ import { activities } from "../data/activities.js";
 // Optionnel : Si tu veux vider/créer les villes d'abord
 for (const cit of cities) {
   await City.findOrCreate({
-    where: { id: cit.id },
+    where: { name: cit.name }, // On cherche par le nom
     defaults: { name: cit.name }
   });
 }

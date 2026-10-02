@@ -1,2 +1,2 @@
 ### Récupérer tous les Gamers
-GET http://localhost:3000/hotels
+GET http://localhost:3000/activity/3
