@@ -55,6 +55,7 @@ for (const act of activities) {
     id: act.id,
     name: act.name,
     image: act.image,
+    description: act.description,
     cityId: act.cityId // Le modèle définit la clé étrangère en camelCase (cityId)
   });
 }
