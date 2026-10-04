@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node migrations/createTables.js && node migrations/seedTables.js && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js",
     "db:sync": "node migrations/createTables.js",
