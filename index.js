@@ -10,7 +10,7 @@ app.use(express.static("./public"));
 
 app.use(express.json());
 app.use(cors({
-  origin: ['https://reservia-front.onrender.com/'],
+  origin: ['http://localhost:5173','https://reservia-front.onrender.com/'],
   credentials: true,
 }));
 
