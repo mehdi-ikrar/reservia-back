@@ -12,6 +12,10 @@ Activity.init({
   image: {
     type: DataTypes.STRING(200),
     allowNull: false
+  },
+  description: {
+    type: DataTypes.STRING(500),
+    allowNull: false
   }
 }, {
   sequelize,
