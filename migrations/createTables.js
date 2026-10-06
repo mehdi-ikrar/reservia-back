@@ -11,4 +11,5 @@ await sequelize.sync();
 
 console.log('All tables are created!');
 
-await sequelize.close();
+
+       
